@@ -666,7 +666,7 @@ section .products .product {
     flex-direction: column;
     align-items: center;
     border: 1px solid var(--text);
-    width: 150px;
+    width: 145px;
     gap: 5px;
     font-weight: bold;
     font-size: 20px;
