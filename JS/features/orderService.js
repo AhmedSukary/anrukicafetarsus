@@ -24,7 +24,7 @@ export async function AddNewOrder(orderedName, tableNumber) {
     return result;
 }
 
-export async function AddOrderToPrint(id, status, payment, orderedName, total, tableNumber, createdAt) {
+export async function AddOrderToPrint(id, status, payment, orderedName, total, tableNumber, notes, createdAt) {
     const result = await post("/Order/AddOrderToPrint", {
         id,
         status,
@@ -32,6 +32,7 @@ export async function AddOrderToPrint(id, status, payment, orderedName, total, t
         orderedName,
         total,
         tableNumber,
+        notes,
         createdAt,
     });
     return result;
