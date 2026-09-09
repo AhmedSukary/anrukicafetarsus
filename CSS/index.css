@@ -545,7 +545,7 @@ section .order .status button img {
 
 section .order .items {
     width: 100%;
-    height: 300px;
+    height: 250px;
     padding: 5px;
     border: 1px solid var(--text);
     background-color: var(--bg);
@@ -589,6 +589,22 @@ section .order .item .info .controls button img {
 }
 
 section .order .item .description {
+    width: 100%;
+}
+
+section .order .notes {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+section .order .notes span {
+    color: var(--blue-color);
+    font-weight: bold;
+}
+
+section .order .notes input {
     width: 100%;
 }
 
@@ -678,13 +694,15 @@ section .products .product .controls button img {
     width: 30px;
     height: 30px;
 }
-section .products .product .send{
+
+section .products .product .send {
     width: 100%;
     border: 1px solid var(--text);
     border-left: none;
     border-right: none;
     background-color: var();
 }
+
 section .products .product .send img {
     width: 40px;
     height: 40px;
