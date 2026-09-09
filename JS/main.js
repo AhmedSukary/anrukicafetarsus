@@ -81,6 +81,7 @@ let currentTable;
 
 const TableNumberEle = document.getElementById("tableNumber");
 const OrderTotalAmountEle = document.getElementById("orderTotalAmount");
+const Notes = document.getElementById("notes");
 const SendOrderEle = document.getElementById("sendOrder");
 const CanselOrderEle = document.getElementById("canselOrder");
 const AddExtraToOrder = document.getElementById("addExtraToOrder");
@@ -834,11 +835,10 @@ SendOrderEle.addEventListener("click", async () => {
         }
         currentOrder.total = total;
         await UpdateOrder(currentOrder.id, currentOrder.status, currentOrder.payment, currentOrder.orderedName, currentOrder.total, currentTable.number, currentOrder.createdAt);
-        await UpdateTable(currentTable.id, currentTable.number, currentTable.isAvailable, "Processing");
-        await AddOrderToPrint(currentOrder.id, currentOrder.status, currentOrder.payment, currentOrder.orderedName, currentOrder.total, currentTable.number, currentOrder.createdAt);
-        currentTable = null;
-        currentOrder = null;
-        location.reload();
+        await UpdateTable(currentTable.id, currentTable.number, currentTable.isAvailable, "Processing");       
+        await AddOrderToPrint(currentOrder.id, currentOrder.status, currentOrder.payment, currentOrder.orderedName, currentOrder.total, currentTable.number, Notes.value, currentOrder.createdAt); 
+        location.reload();      
+         
     }
     catch (err) {
         alert("⚠️ " + err.message);
