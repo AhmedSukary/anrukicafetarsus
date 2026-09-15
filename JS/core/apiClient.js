@@ -1,4 +1,4 @@
-const API_BASE = "https://cafesystemapitarsus.runasp.net/api";
+const API_BASE = "https://cafesystemapitarsus.premiumasp.net/api";
 
 function getToken() {
     return localStorage.getItem("accessToken");
